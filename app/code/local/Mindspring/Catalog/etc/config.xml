@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Mindspring_Catalog>
+			<version>0.1.0</version>
+		</Mindspring_Catalog>
+	</modules>
+	<layout>
+			<updates>
+				<catalog>
+					<file>catalogquestions.xml</file>
+				</catalog>
+			</updates>
+	</layout>
+</config>

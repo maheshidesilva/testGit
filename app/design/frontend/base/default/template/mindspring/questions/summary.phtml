@@ -1,0 +1,17 @@
+vcxvcxvxcvxcvxilllllllllllll
+<?php if ($this->getReviewsCount()): ?>
+    <div class="ratings">
+        <?php if ($this->getRatingSummary()):?>
+            <div class="rating-box">
+                <div class="rating" style="width:<?php echo $this->getRatingSummary() ?>%"></div>
+            </div>
+        <?php endif;?>
+        <p class="rating-links">
+        	<a href="<?php echo $this->getQuestionsUrl() ?>#questions-form"><?php echo $this->__('Ask a Question') ?></a>
+            <span class="separator">|</span>
+            <a href="<?php echo $this->getQuestionsUrl() ?>"><?php echo $this->__('%d Review(s)', $this->getReviewsCount()) ?></a>
+        </p>
+    </div>
+<?php elseif ($this->getDisplayIfEmpty()): ?>
+    <p class="no-rating"><a href="<?php echo $this->getQuestionsUrl() ?>#questions-form" rel="lightbox"><?php echo $this->__('Be the first to ask a question') ?></a></p>
+<?php endif; ?>

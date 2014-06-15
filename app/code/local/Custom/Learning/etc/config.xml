@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config>    
+    <modules>
+        <Custom_Learning>
+            <version>0.1.0</version>
+        </Custom_Learning>
+    </modules>
+    <global>
+        <events>
+            <controller_front_init_routers>
+                <observers>
+                    <custom_learning_model_observer>
+                        <type>singleton</type>                          
+                        <class>Custom_Learning_Model_Observer</class>
+                        <method>checkForConfigRequest</method>
+                    </custom_learning_model_observer>
+                </observers>
+            </controller_front_init_routers>
+        </events>
+    </global>
+</config>

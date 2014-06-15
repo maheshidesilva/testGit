@@ -1,0 +1,12 @@
+<h2><?php echo $this->getQuestions(); ?></h2>
+<?php $questions = $this->getQuestions();?>
+<?php if ( count($questions) > 0 ):?>
+	<?php foreach ( $questions as $question ) :?>
+		<?php echo '<h3><a href="'.$this->getUrl('questions?id='.$questions['questions_
+	id']).'">Name: '.$questions['questions_name'].'</a></h3>';
+	echo '<p><strong>Location: '.$questions['questions_location'].'</strong></p>';
+	echo '<p>Desciption: '.$questions['questions_description'].'</p><hr />';?>
+	<?php endforeach;?>
+<?php else:?>
+	<?php echo 'We don\'t have any brands here right now. Please try again later.';?>
+<?php endif?>

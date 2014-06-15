@@ -1,0 +1,35 @@
+<div class="box-title">
+    <h2><?php echo $this->__('Write Your Own Question') ?></h2>
+</div>
+<form action="<?php echo $this->getAction() ?>" method="post" id="questions-form">
+    <?php echo $this->getChildHtml('form_fields_before')?>
+    <div class="box-content">
+        <h3 class="product-name"><?php echo $this->__("You're questioning:"); ?> <span><?php echo $this->htmlEscape($this->getProductInfo()->getName()) ?></span></h3>
+        <ul class="form-list">
+            <li>
+                <label for="name_field" class="required"><em>*</em><?php echo $this->__('Name') ?></label>
+                <div class="input-box"><input type="text" name="name" id="name_field" class="input-text required-entry" value="<?php echo $this->htmlEscape($data->getName()) ?>" /></div>
+            </li>
+            <li>
+                <label for="email_field" class="required"><em>*</em><?php echo $this->__('Email') ?></label>
+                <div class="input-box"><input type="text" name="title" id="email_field" class="input-text required-entry" value="<?php echo $this->htmlEscape($data->getEmail()) ?>" /></div>
+            </li>
+            <li>
+                <label for="question_field" class="required"><em>*</em><?php echo $this->__('Question') ?></label>
+                <div class="input-box"><textarea name="question" id="question_field" cols="5" rows="3" class="required-entry"><?php echo $this->htmlEscape($data->getDetail()) ?></textarea></div>
+            </li>
+        </ul>
+        <div class="buttons-set form-buttons btn-only">
+            <button type="submit" class="button"><span><span><?php echo $this->__('Submit') ?></span></span></button>
+        </div>
+        <p class="required"><?php echo $this->__('* Required Fields') ?></p>
+    </div>
+</form>
+
+    
+
+<div class="box-content">
+    <p class="review-nologged" id="questions-form">
+        <?php echo $this->__('Only registered users can write reviews. Please, <a href="%s">log in</a> or <a href="%s">register</a>', $this->getLoginLink(), Mage::helper('customer')->getRegisterUrl()) ?>
+    </p>
+</div>

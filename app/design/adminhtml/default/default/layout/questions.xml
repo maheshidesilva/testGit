@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+	<questions_adminhtml_questions_index>
+		<reference name="content">
+			<block type="questions/adminhtml_questions" name="questions" />
+		</reference>
+	</questions_adminhtml_questions_index>
+</layout>

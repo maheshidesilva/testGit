@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+	<questions_index_index>
+		<reference name="content">
+			<block type="questions/questions" name="questions" template="mindspring/questions/form.phtml"/>
+		</reference>
+	</questions_index_index>
+	
+	<questions_questions_list>
+		<reference name="root">
+            <action method="setTemplate"><template>mindspring/questions/questionsbk.phtml</template></action>
+        </reference>
+		<reference name="content">
+			<block type="questions/form" name="questions" template="mindspring/questions/form.phtml"/>
+		</reference>
+		<reference name="head">
+			<action method="addJs"><script>js/prototype.js</script></action>
+			<action method="addJs"><script>js/scriptaculous.js?load=effects,builder</script></action>
+			<action method="addJs"><script>js/lightbox.js</script></action>
+          <action method="addCss"><stylesheet>css/lightbox.css</stylesheet></action>
+		</reference>
+	</questions_questions_list>
+	
+	<!--  <catalog_product_view translate="label"> 
+		<reference name="content">
+			<block type="catalog/product_view_media" name="questions.summary" after="product.info" before="product.info.additional" as="media" template="mindspring/questions/summary.phtml"/>                
+ 		</reference>
+    </catalog_product_view>-->
+
+	<catalog_product_view translate="label">
+        <reference name="product.info"> 
+        	<action method="setTemplate"><template>mindspring/questions/view.phtml</template></action>
+        </reference>
+     </catalog_product_view>
+
+</layout>            

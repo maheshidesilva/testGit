@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+  <config>
+     <modules>
+        <Balance_Connect>
+          <version>1.0.0</version>
+        </Balance_Connect>
+     </modules>
+     <global>
+     <models>
+            <connect>
+                <class>Balance_Connect_Model</class>
+            </connect>
+        </models>
+     </global>
+     <frontend>
+       <routers>
+          <routeurfrontend>
+              <use>standard</use>
+              <args>
+                 <module>Balance_Connect</module>
+                 <frontName>balanceconnect</frontName>
+              </args>
+           </routeurfrontend>
+       </routers>
+     </frontend>
+     
+     
+     <admin>
+     <routers>
+         <balanceconnect>
+            <use>admin</use>
+            <args>
+               <module>Balance_Connect</module>
+               <frontName>balanceconnect</frontName>
+            </args>
+         </balanceconnect>
+      </routers>
+ </admin>
+ <adminhtml>
+   <layout>
+      <updates>
+          <balanceconnect>
+              <file>connect.xml</file>
+           </balanceconnect>
+      </updates>
+   </layout>
+    <acl>
+			<resources>
+				<admin>
+					<children>
+						<system>
+							<children>
+								<config>
+									<children>
+										<balanceconnect translate="title">
+											<title>Balance Connect</title>
+											<sort_order>50</sort_order>
+										</balanceconnect>
+									</children>
+								</config>
+							</children>
+						</system>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+</adminhtml>
+</config>

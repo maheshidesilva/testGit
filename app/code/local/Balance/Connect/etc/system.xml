@@ -1,0 +1,31 @@
+<config>
+
+    <tabs>
+        <!--<tbtall translate="label" module="balanceconnect">-->
+        <tbtall translate="label" module="connect">
+            <label>Balance Extensions</label>
+            <sort_order>100</sort_order>
+        </tbtall>
+    </tabs>
+   <sections>
+        <!--<balanceconnect translate="label" module="balanceconnect">-->
+        		<balanceconnect translate="label" module="connect">
+            <label>Connect</label>
+            <tab>tbtall</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>10</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>0</show_in_store>
+            <groups>
+                <about translate="label">
+                    <label>About This Extension</label>
+                	<comment>Extension Information Provided By www.balanceinternet.com.au</comment>
+		    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                </about>
+            </groups>
+        </balanceconnect>
+    </sections>
+</config>
